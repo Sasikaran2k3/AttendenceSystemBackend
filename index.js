@@ -21,13 +21,11 @@ app.get("/search/:register_no",async(req,res)=>{
     }
 })
 
-mongo.connect(process.env.URL)
-.then(()=>{
+()=>{
     app.listen(process.env.PORT,(error)=>{
         if(error)
             console.log("Backend Error");
         else
             console.log("Server Listening At "+ process.env.PORT);
     });
-})
-.catch((error)=> {console.log("MongoError");})
+}
