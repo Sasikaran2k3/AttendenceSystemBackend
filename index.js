@@ -1,5 +1,5 @@
 require("dotenv").config()
-const {interact} = require("../backend/database_pointer.js")
+const {interact} = require("./database_pointer.js")
 const express = require("express")
 const mongo = require("mongoose")
 
