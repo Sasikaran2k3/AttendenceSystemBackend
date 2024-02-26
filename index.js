@@ -2,8 +2,10 @@ require("dotenv").config()
 const {interact} = require("./database_pointer.js")
 const express = require("express")
 const mongo = require("mongoose")
+const cors = require('cors')
 
 const app = express();
+app.use(cors())
 
 app.get("/",async(req,res)=>{
     const value = await interact();
